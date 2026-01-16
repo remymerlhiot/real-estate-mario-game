@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario Bros - Real Estate Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="hud">
+            <div id="score-container">
+                <span class="hud-label">SCORE</span>
+                <span id="score">000000</span>
+            </div>
+            <div id="coins-container">
+                <span class="hud-label">COINS</span>
+                <span id="coins">×00</span>
+            </div>
+            <div id="world-container">
+                <span class="hud-label">WORLD</span>
+                <span id="world">1-1</span>
+            </div>
+            <div id="time-container">
+                <span class="hud-label">TIME</span>
+                <span id="time">400</span>
+            </div>
+            <div id="lives-container">
+                <span class="hud-label">LIVES</span>
+                <span id="lives">×03</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div id="menu-screen" class="screen active">
+            <h1>SUPER MARIO BROS</h1>
+            <h2>Real Estate Edition</h2>
+            <div class="menu-options">
+                <button id="start-button" class="menu-button">START GAME</button>
+                <div class="controls-info">
+                    <p>CONTROLS:</p>
+                    <p>← → Arrow Keys / A D - Move</p>
+                    <p>SPACE / W / ↑ - Jump</p>
+                </div>
+            </div>
+        </div>
+        <div id="game-over-screen" class="screen">
+            <h1>GAME OVER</h1>
+            <p id="final-score">SCORE: 0</p>
+            <button id="restart-button" class="menu-button">TRY AGAIN</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    background-color: #5c94fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+#hud {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    border-bottom: 3px solid #fff;
+}
+
+#hud > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.hud-label {
+    color: #fcfcfc;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+#score, #coins, #world, #time, #lives {
+    color: #fff;
+    font-size: 14px;
+}
+
+#gameCanvas {
+    display: block;
+    background-color: #5c94fc;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 100;
+    padding: 20px;
+}
+
+.screen.active {
+    display: flex;
+}
+
+#menu-screen h1 {
+    font-size: 32px;
+    color: #ff0000;
+    text-shadow: 3px 3px 0px #000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#menu-screen h2 {
+    font-size: 16px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 0px #000;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu-button {
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    font-size: 16px;
+    padding: 15px 30px;
+    background-color: #ff0000;
+    color: #fff;
+    border: 4px solid #fff;
+    cursor: pointer;
+    text-shadow: 2px 2px 0px #000;
+    box-shadow: 4px 4px 0px #000;
+    transition: all 0.1s;
+}
+
+.menu-button:hover {
+    background-color: #cc0000;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000;
+}
+
+.menu-button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px #000;
+}
+
+.controls-info {
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.8;
+    color: #ffcc00;
+}
+
+.controls-info p:first-child {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#game-over-screen h1 {
+    font-size: 48px;
+    color: #ff0000;
+    text-shadow: 4px 4px 0px #000;
+    margin-bottom: 30px;
+}
+
+#final-score {
+    font-size: 20px;
+    color: #ffcc00;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    #hud {
+        font-size: 8px;
+        padding: 10px;
+    }
+
+    .hud-label {
+        font-size: 6px;
+    }
+
+    #score, #coins, #world, #time, #lives {
+        font-size: 10px;
+    }
+
+    #menu-screen h1 {
+        font-size: 20px;
+    }
+
+    #menu-screen h2 {
+        font-size: 12px;
+    }
+
+    .menu-button {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .controls-info {
+        font-size: 8px;
+    }
+}
